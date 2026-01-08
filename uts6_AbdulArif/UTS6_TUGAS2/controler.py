@@ -1,26 +1,8 @@
-from utils import *
-import os
+import os 
+from cli import *
 
 def cls():
     os.system("cls" if os.name == "nt" else "clear")
-
-
-def menu_biodata():
-    cls()
-    print("--------- Biodata Mahasiswa ---------")
-
-    pilihan = input("Lihat Biodata atau Input Biodata? (1/2): ")
-    cls()
-
-    if pilihan == "1":
-        lihat_biodata()
-    elif pilihan == "2":
-        input_biodata()
-    else:
-        print("Pilihan tidak valid")
-
-    input("")
-
 
 def kumpulan_menu():
     while True:
@@ -38,27 +20,21 @@ def kumpulan_menu():
 
         if pilihan == "1":
             menu_biodata()
-
         elif pilihan == "2":
-            input_sks()
+            input_sks_cli()
             input("")
-
         elif pilihan == "3":
             input_nilai()
             input("")
-
         elif pilihan == "4":
             lihat_nilai()
             input("")
-
         elif pilihan == "5":
-            hitung_ip()
+            hitung_ip_cli()
             input("")
-
         elif pilihan == "6":
             print("Program selesai")
             break
-
         else:
             print("Pilihan tidak valid")
             input("")
